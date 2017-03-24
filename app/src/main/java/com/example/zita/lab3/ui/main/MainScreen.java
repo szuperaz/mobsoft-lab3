@@ -1,7 +1,7 @@
 package com.example.zita.lab3.ui.main;
 
 /**
- * Created by zita on 3/24/17.
+ * Created by Patrik on 2017. 03. 19..
  */
 
 public interface MainScreen {
