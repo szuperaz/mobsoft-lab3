@@ -9,10 +9,6 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
-/**
- * Created by zita on 3/24/17.
- */
-
 @Module
 public class UIModule {
     private Context context;

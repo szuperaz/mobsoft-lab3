@@ -4,10 +4,6 @@ import android.app.Application;
 
 import com.example.zita.lab3.ui.UIModule;
 
-/**
- * Created by zita on 3/24/17.
- */
-
 public class MobSoftApplication extends Application {
 
     public static MobSoftApplicationComponent injector;

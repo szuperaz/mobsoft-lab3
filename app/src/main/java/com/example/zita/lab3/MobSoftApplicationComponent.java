@@ -1,14 +1,11 @@
 package com.example.zita.lab3;
 
 import com.example.zita.lab3.ui.UIModule;
+import com.example.zita.lab3.ui.main.MainActivity;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-
-/**
- * Created by zita on 3/24/17.
- */
 
 @Singleton
 @Component(modules = {UIModule.class})
