@@ -2,7 +2,7 @@ package com.example.zita.lab3.ui;
 
 import android.content.Context;
 
-import com.example.zita.lab3.ui.main.MainPresenter;
+import com.example.zita.lab3.ui.overview.OverviewPresenter;
 
 import javax.inject.Singleton;
 
@@ -24,8 +24,8 @@ public class UIModule {
 
     @Provides
     @Singleton
-    public MainPresenter provideMainPresenter() {
-        return new MainPresenter();
+    public OverviewPresenter provideOverviewPresenter() {
+        return new OverviewPresenter();
     }
 
 }

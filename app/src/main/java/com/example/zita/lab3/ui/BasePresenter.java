@@ -1,6 +1,6 @@
 package com.example.zita.lab3.ui;
 
-public abstract class Presenter<S> {
+public abstract class BasePresenter<S> {
 	protected S screen;
 
 	public void attachScreen(S screen) {
