@@ -2,6 +2,7 @@ package com.example.zita.lab3.ui.overview;
 
 import android.os.Bundle;
 
+import com.example.zita.lab3.MobSoftApplication;
 import com.example.zita.lab3.R;
 import com.example.zita.lab3.ui.BaseActivity;
 
@@ -12,24 +13,25 @@ import javax.inject.Inject;
 public class OverviewActivity extends BaseActivity implements OverviewScreen {
 
     @Inject
-    OverviewPresenter presenter;
+    OverviewPresenter overviewPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_overview);
+        MobSoftApplication.injector.inject(this);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        presenter.attachScreen(this);
+        overviewPresenter.attachScreen(this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        presenter.detachScreen();
+        overviewPresenter.detachScreen();
     }
 
     @Override
