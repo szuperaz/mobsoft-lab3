@@ -8,9 +8,5 @@ public interface OverviewScreen extends BaseScreen {
     // TODO: replace String with business model
     void showPlants(List<String> plants);
 
-    void navigateToPlantDetails(int plantId);
-
-    void navigateToNewMessage();
-
     void toggleFavouriteIconStatus();
 }

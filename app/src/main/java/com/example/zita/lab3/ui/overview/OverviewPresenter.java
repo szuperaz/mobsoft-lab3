@@ -23,14 +23,6 @@ public class OverviewPresenter extends BasePresenter<OverviewScreen> {
         // TODO: implement me
     }
 
-    public void navigateToPlantDetails(int plantId) {
-        // TODO: implement me
-    }
-
-    public void navigateToNewMessage() {
-        // TODO: implement me
-    }
-
     public void toggleFavouriteStatus(int plantIs) {
         // TODO: implement me
     }

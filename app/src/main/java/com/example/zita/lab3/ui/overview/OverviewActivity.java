@@ -39,12 +39,10 @@ public class OverviewActivity extends BaseActivity implements OverviewScreen {
         // TODO: implement me
     }
 
-    @Override
     public void navigateToPlantDetails(int plantId) {
         // TODO: implement me
     }
 
-    @Override
     public void navigateToNewMessage() {
         // TODO: implement me
     }
