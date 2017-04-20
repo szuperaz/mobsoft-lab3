@@ -32,16 +32,9 @@ public class SugarOrmRepository implements Repository {
     }
 
     @Override
-    public void addPlantToFavourites(Long plantId) {
+    public void toggleFavouriteStatus(Long plantId) {
         Plant plant = SugarRecord.findById(Plant.class, plantId);
-        plant.setFavourite(true);
-        SugarRecord.saveInTx(plant);
-    }
-
-    @Override
-    public void deletePlantFromFavourites(Long plantId) {
-        Plant plant = SugarRecord.findById(Plant.class, plantId);
-        plant.setFavourite(false);
+        plant.setFavourite(!plant.isFavourite());
         SugarRecord.saveInTx(plant);
     }
 }

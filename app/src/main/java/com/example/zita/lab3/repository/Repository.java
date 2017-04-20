@@ -17,7 +17,6 @@ public interface Repository {
 
     void saveMessage(Message message);
 
-    void addPlantToFavourites(Long plantId);
+    void toggleFavouriteStatus(Long plantId);
 
-    void deletePlantFromFavourites(Long plantId);
 }

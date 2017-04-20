@@ -59,12 +59,8 @@ public class MemoryRepository implements Repository {
     }
 
     @Override
-    public void addPlantToFavourites(Long plantId) {
-        plants.get(plantId.intValue()).setFavourite(true);
-    }
-
-    @Override
-    public void deletePlantFromFavourites(Long plantId) {
-        plants.get(plantId.intValue()).setFavourite(true);
+    public void toggleFavouriteStatus(Long plantId) {
+        Plant plant = plants.get(plantId.intValue());
+        plant.setFavourite(!plant.isFavourite());
     }
 }

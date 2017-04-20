@@ -4,9 +4,10 @@ import com.example.zita.lab3.MobSoftApplication;
 import com.example.zita.lab3.interactor.events.SaveMessageEvent;
 import com.example.zita.lab3.model.Message;
 import com.example.zita.lab3.repository.Repository;
-import com.google.common.eventbus.EventBus;
 
 import javax.inject.Inject;
+
+import de.greenrobot.event.EventBus;
 
 public class MessagesInteractor {
     @Inject

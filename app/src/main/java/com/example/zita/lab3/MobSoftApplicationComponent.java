@@ -7,6 +7,7 @@ import com.example.zita.lab3.repository.RepositoryModule;
 import com.example.zita.lab3.ui.UIModule;
 import com.example.zita.lab3.ui.details.DetailsActivity;
 import com.example.zita.lab3.ui.message.MessageActivity;
+import com.example.zita.lab3.ui.message.MessagePresenter;
 import com.example.zita.lab3.ui.overview.OverviewActivity;
 import com.example.zita.lab3.ui.overview.OverviewPresenter;
 
@@ -24,5 +25,7 @@ public interface MobSoftApplicationComponent {
     void inject(MessagesInteractor messagesInteractor);
     void inject(PlantsInteractor plantsInteractor);
     void inject(MobSoftApplication mobSoftApplication);
+    void inject(OverviewPresenter overviewPresenter);
+    void inject(MessagePresenter messagePresenter);
 
 }

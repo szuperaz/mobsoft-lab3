@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.example.zita.lab3.MobSoftApplication;
 import com.example.zita.lab3.R;
+import com.example.zita.lab3.model.Plant;
 import com.example.zita.lab3.ui.BaseActivity;
 
 import java.util.List;
@@ -35,11 +36,11 @@ public class OverviewActivity extends BaseActivity implements OverviewScreen {
     }
 
     @Override
-    public void showPlants(List<String> plants) {
+    public void showPlants(List<Plant> plants) {
         // TODO: implement me
     }
 
-    public void navigateToPlantDetails(int plantId) {
+    public void navigateToPlantDetails(Long plantId) {
         // TODO: implement me
     }
 
