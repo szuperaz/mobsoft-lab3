@@ -14,10 +14,10 @@ import javax.inject.Inject;
 public class PlantsInteractor {
 
     @Inject
-    private Repository repository;
+    Repository repository;
 
     @Inject
-    private EventBus eventBus;
+    EventBus eventBus;
 
     public PlantsInteractor () {
         MobSoftApplication.injector.inject(this);

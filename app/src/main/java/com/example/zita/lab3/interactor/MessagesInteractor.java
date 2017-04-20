@@ -10,9 +10,9 @@ import javax.inject.Inject;
 
 public class MessagesInteractor {
     @Inject
-    private Repository repository;
+    Repository repository;
     @Inject
-    private EventBus eventBus;
+    EventBus eventBus;
 
     public MessagesInteractor () {
         MobSoftApplication.injector.inject(this);
