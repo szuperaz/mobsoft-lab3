@@ -24,8 +24,4 @@ public class DetailsActivity extends BaseActivity implements DetailsScreen {
         super.onStart();
         detailsPresenter.attachScreen(this);
     }
-    @Override
-    public void displayDetails(String plant) {
-        // TODO implement me
-    }
 }

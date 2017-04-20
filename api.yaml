@@ -1,0 +1,114 @@
+swagger: '2.0'
+info:
+  title: Gardening API
+  description: Backend API for the Gardening service.
+  version: "1.0.0"
+
+schemes:
+  - http
+
+basePath: /api
+
+produces:
+  - application/json
+
+paths:
+  /plants:
+    get:
+      summary: Plants
+      description: |
+        Returns all the plants available in the system.
+      tags:
+        - Plants
+      responses:
+        200:
+          description: An array of plants
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Plant'
+        500:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /messages:
+    post:
+      summary:  Sends a message
+      description: |
+        Users can send messages to the horticulture
+      parameters:
+        - name: messageWithEmail
+          in: body
+          description: The message the usesr sending alon with an email address to reply to.
+          required: true
+          schema:
+            $ref: '#/definitions/MessageWithEmail'
+      tags:
+        - Message
+      responses:
+        204:
+          description: Message sent
+        500:
+          description: Database error or other unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+definitions:
+  Plant:
+    type: object
+    properties:
+      id:
+        type: number
+        description: Unique identifier representing a specific plant.
+      name:
+        type: string
+        description: Name of the plant.
+      type:
+        type: string
+        description: Type of the palnt.
+      profileImageUrl:
+        type: string
+        description: |
+          An URL of a photo of the plant which can be used as a profile (square) picture
+      imageUrl:
+        type: string
+        description: An URL of a photo of the plant
+      description:
+        type: string
+        description: Description of the plant
+      plantationTime:
+        type: string
+        description: A string representing the plantation time of the plant
+      pickingTime:
+        type: string
+        description: Picking time of the plant.
+
+  Message:
+    type: object
+    properties:
+      body:
+        type: string
+        description: The content of the message
+      photo:
+        type: string
+        format: byte
+        description: Photo to send along with the message, can be null
+
+  MessageWithEmail:
+    type: object
+    properties:
+      email:
+        type: string
+      message:
+        $ref: '#/definitions/Message'
+
+
+
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
