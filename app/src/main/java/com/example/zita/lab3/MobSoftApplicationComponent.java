@@ -8,6 +8,7 @@ import com.example.zita.lab3.ui.UIModule;
 import com.example.zita.lab3.ui.details.DetailsActivity;
 import com.example.zita.lab3.ui.message.MessageActivity;
 import com.example.zita.lab3.ui.overview.OverviewActivity;
+import com.example.zita.lab3.ui.overview.OverviewPresenter;
 
 import javax.inject.Singleton;
 
