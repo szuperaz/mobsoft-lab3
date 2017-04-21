@@ -2,7 +2,6 @@ package com.example.zita.lab3.repository;
 
 import android.content.Context;
 
-import com.example.zita.lab3.model.Message;
 import com.example.zita.lab3.model.Plant;
 import com.orm.SugarContext;
 import com.orm.SugarRecord;
@@ -24,11 +23,6 @@ public class SugarOrmRepository implements Repository {
     @Override
     public List<Plant> getPlants() {
         return SugarRecord.listAll(Plant.class);
-    }
-
-    @Override
-    public void saveMessage(Message message) {
-        SugarRecord.saveInTx(message);
     }
 
     @Override

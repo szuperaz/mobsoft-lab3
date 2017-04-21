@@ -7,14 +7,24 @@ public class Message {
     private Long id = null;
     private String body;
     private String photo;
+    private String email;
 
-    public Message(Long id, String body, String photo) {
+    public Message(Long id, String body, String photo, String email) {
         this.id = id;
         this.body = body;
         this.photo = photo;
+        this.email = email;
     }
 
     public Message() {
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Long getId() {

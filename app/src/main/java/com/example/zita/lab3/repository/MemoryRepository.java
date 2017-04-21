@@ -54,11 +54,6 @@ public class MemoryRepository implements Repository {
     }
 
     @Override
-    public void saveMessage(Message message) {
-
-    }
-
-    @Override
     public void toggleFavouriteStatus(Long plantId) {
         Plant plant = plants.get(plantId.intValue());
         plant.setFavourite(!plant.isFavourite());

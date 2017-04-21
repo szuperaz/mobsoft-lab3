@@ -23,7 +23,6 @@ public class MessagesInteractor {
         SaveMessageEvent event = new SaveMessageEvent();
         event.setMessage(message);
         try {
-            repository.saveMessage(message);
             eventBus.post(event);
         }
         catch (Exception e) {

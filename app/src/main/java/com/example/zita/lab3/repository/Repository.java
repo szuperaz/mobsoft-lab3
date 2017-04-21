@@ -15,8 +15,6 @@ public interface Repository {
 
     List<Plant> getPlants();
 
-    void saveMessage(Message message);
-
     void toggleFavouriteStatus(Long plantId);
 
 }

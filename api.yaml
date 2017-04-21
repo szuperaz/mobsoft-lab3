@@ -28,6 +28,8 @@ paths:
       tags:
         - Plants
       responses:
+        304:
+          description: No changes
         200:
           description: An array of plants
           schema:
@@ -49,7 +51,7 @@ paths:
           description: The message the usesr sending alon with an email address to reply to.
           required: true
           schema:
-            $ref: '#/definitions/MessageWithEmail'
+            $ref: '#/definitions/Message'
       tags:
         - Message
       responses:
@@ -93,6 +95,8 @@ definitions:
   Message:
     type: object
     properties:
+      email:
+          type: string
       body:
         type: string
         description: The content of the message
@@ -100,16 +104,6 @@ definitions:
         type: string
         format: byte
         description: Photo to send along with the message, can be null
-
-  MessageWithEmail:
-    type: object
-    properties:
-      email:
-        type: string
-      message:
-        $ref: '#/definitions/Message'
-
-
 
   Error:
     type: object
