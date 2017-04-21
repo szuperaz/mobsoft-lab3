@@ -18,6 +18,13 @@ paths:
       summary: Plants
       description: |
         Returns all the plants available in the system.
+      parameters:
+        - name: date
+          in: query
+          description: |
+            Date of last update, ISO formatted date string
+          required: false
+          type: string
       tags:
         - Plants
       responses:
