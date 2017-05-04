@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.zita.lab3.model.Message;
 import com.example.zita.lab3.model.Plant;
+import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 import java.util.List;

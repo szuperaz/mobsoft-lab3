@@ -19,7 +19,5 @@ public interface PlantsApi {
      */
 
     @GET("plants")
-    Call<List<Plant>> plantsGet(
-            @Query("date") String date
-    );
+    Call<List<Plant>> plantsGet(@Query("date") String date);
 }
