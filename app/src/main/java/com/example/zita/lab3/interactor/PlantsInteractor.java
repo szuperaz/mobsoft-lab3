@@ -40,7 +40,7 @@ public class PlantsInteractor {
     public void toggleFavouriteStatus(Long plantId) {
         UpdatePlantEvent event = new UpdatePlantEvent();
         try {
-            repository.toggleFavouriteStatus(plantId);
+            event.setPlant(repository.toggleFavouriteStatus(plantId));
             eventBus.post(event);
         }
         catch (Exception e) {

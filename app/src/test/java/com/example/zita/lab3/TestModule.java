@@ -53,7 +53,7 @@ public class TestModule {
 
     @Provides
     @Singleton
-    public Executor provideNetworkExecutor() {
+    public Executor provideExecutor() {
         return new UiExecutor();
     }
 

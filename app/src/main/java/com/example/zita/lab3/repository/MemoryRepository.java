@@ -55,8 +55,14 @@ public class MemoryRepository implements Repository {
     }
 
     @Override
-    public void toggleFavouriteStatus(Long plantId) {
-        Plant plant = plants.get(plantId.intValue());
-        plant.setFavourite(!plant.isFavourite());
+    public Plant getPlant(Long plantId) {
+        return plants.get(plantId.intValue()-1);
+    }
+
+    @Override
+    public Plant toggleFavouriteStatus(Long plantId) {
+        Plant plant = plants.get(plantId.intValue()-1);
+        plant.setFavourite(plant.isFavourite() ? false : true);
+        return plant;
     }
 }

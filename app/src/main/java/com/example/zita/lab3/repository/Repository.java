@@ -15,6 +15,8 @@ public interface Repository {
 
     List<Plant> getPlants();
 
-    void toggleFavouriteStatus(Long plantId);
+    Plant getPlant(Long plantId);
+
+    Plant toggleFavouriteStatus(Long plantId);
 
 }

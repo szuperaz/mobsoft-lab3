@@ -26,9 +26,16 @@ public class SugarOrmRepository implements Repository {
     }
 
     @Override
-    public void toggleFavouriteStatus(Long plantId) {
+    public Plant getPlant(Long plantId) {
+        return SugarRecord.findById(Plant.class, plantId);
+    }
+
+    @Override
+    public Plant toggleFavouriteStatus(Long plantId) {
         Plant plant = SugarRecord.findById(Plant.class, plantId);
         plant.setFavourite(!plant.isFavourite());
         SugarRecord.saveInTx(plant);
+
+        return plant;
     }
 }

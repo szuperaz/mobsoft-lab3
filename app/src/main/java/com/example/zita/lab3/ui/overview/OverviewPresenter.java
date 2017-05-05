@@ -2,6 +2,7 @@ package com.example.zita.lab3.ui.overview;
 
 import android.util.Log;
 
+import com.example.zita.lab3.MobSoftApplication;
 import com.example.zita.lab3.interactor.PlantsInteractor;
 import com.example.zita.lab3.interactor.events.GetPlantsEvent;
 import com.example.zita.lab3.interactor.events.UpdatePlantEvent;
@@ -13,11 +14,7 @@ import javax.inject.Inject;
 
 import de.greenrobot.event.EventBus;
 
-import static com.example.zita.lab3.MobSoftApplication.injector;
-
 public class OverviewPresenter extends BasePresenter<OverviewScreen> {
-
-    private static OverviewPresenter instance = null;
 
     @Inject
     PlantsInteractor interactor;
@@ -31,7 +28,7 @@ public class OverviewPresenter extends BasePresenter<OverviewScreen> {
     @Override
     public void attachScreen(OverviewScreen screen) {
         super.attachScreen(screen);
-        injector.inject(this);
+        MobSoftApplication.injector.inject(this);
         eventBus.register(this);
     }
 
@@ -82,7 +79,7 @@ public class OverviewPresenter extends BasePresenter<OverviewScreen> {
             Log.e("Networking", "Error reading plants", event.getThrowable());
         } else {
             if (screen != null) {
-                screen.toggleFavouriteIconStatus();
+                screen.toggleFavouriteIconStatus(event.getPlant());
             }
         }
     }

@@ -8,5 +8,5 @@ import java.util.List;
 public interface OverviewScreen extends BaseScreen {
     void showPlants(List<Plant> plants);
 
-    void toggleFavouriteIconStatus();
+    void toggleFavouriteIconStatus(Plant plant);
 }
