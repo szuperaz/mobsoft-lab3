@@ -2,9 +2,7 @@ package com.example.zita.lab3.repository;
 
 import android.content.Context;
 
-import com.example.zita.lab3.model.Message;
 import com.example.zita.lab3.model.Plant;
-import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +33,7 @@ public class MemoryRepository implements Repository {
                 "Bugás hortenzia Phantom",
                 "Díszcserje / Díszfa",
                 true,
-                "https://www.starkl.hu/img/eshop/thumbnails/102440_jpg_83473_406_488.jpg",
+                "https://www.starkl.hu/img/eshop/thumbnails/131955_jpg_103626_406_488.jpg",
                 "Fantasztikus, rendkívül hosszú ideig tartó virágpompa. Az elvirágzásig a világító fehértől a sötétpirosig csodálhatja színeit.",
                 "Márciustól júniusig és szeptembertől októberig.",
                 "Júliustól októberig."

@@ -31,8 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.details.DetailsActivity">
-        </activity>
+        <activity android:name=".ui.details.DetailsActivity"></activity>
+        <activity android:name=".ui.message.MessageActivity"></activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

@@ -13,6 +13,7 @@ import com.example.zita.lab3.R;
 import com.example.zita.lab3.model.Plant;
 import com.example.zita.lab3.ui.BaseActivity;
 import com.example.zita.lab3.ui.details.DetailsActivity;
+import com.example.zita.lab3.ui.message.MessageActivity;
 
 import java.util.List;
 
@@ -47,6 +48,13 @@ public class OverviewActivity extends BaseActivity implements OverviewScreen {
         super.onStart();
         overviewPresenter.attachScreen(this);
         overviewPresenter.getPlants();
+
+        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToNewMessage();
+            }
+        });
     }
 
     @Override
@@ -63,11 +71,14 @@ public class OverviewActivity extends BaseActivity implements OverviewScreen {
     }
 
     public void navigateToPlantDetails(Long plantId) {
-        // TODO: implement me
+        Intent i = new Intent(OverviewActivity.this, DetailsActivity.class);
+        i.putExtra("id", plantId);
+        startActivity(i);
     }
 
     public void navigateToNewMessage() {
-        // TODO: implement me
+        Intent i = new Intent(OverviewActivity.this, MessageActivity.class);
+        startActivity(i);
     }
 
     @Override
@@ -78,9 +89,7 @@ public class OverviewActivity extends BaseActivity implements OverviewScreen {
     public void itemClicked(View v) {
         int position = mRecyclerView.getChildLayoutPosition(v);
         if(position != -1) {
-            Intent i = new Intent(getApplicationContext(), DetailsActivity.class);
-            i.putExtra("id", plants.get(position).getId());
-            startActivity(i);
+            navigateToPlantDetails(plants.get(position).getId());
         }
     }
 }

@@ -92,7 +92,7 @@ public class OverviewAdapter extends RecyclerView.Adapter<OverviewAdapter.ViewHo
             super(v);
             view = v;
             textView = (TextView) v.findViewById(R.id.title);
-            descriptionView = (TextView) v.findViewById(R.id.description);
+            descriptionView = (TextView) v.findViewById(R.id.type);
             imageView = (ImageView) v.findViewById(R.id.image);
             favIcon = (ImageView) v.findViewById(R.id.fav);
         }
